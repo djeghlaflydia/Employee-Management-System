@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .input-style {
+      @apply w-full p-2 mt-2 rounded-md bg-transparent border-2 border-white text-white focus:outline-none focus:border-gray-400 transition-all;
+    }
+  }
