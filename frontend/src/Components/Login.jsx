@@ -34,7 +34,8 @@ const Login = () => {
     if (Object.keys(newErrors).length === 0) {
       setIsLoading(true);
 
-      const url = isSignUp ? 'https://backend-production-8a7c.up.railway.app/admin/signup' : 'https://backend-production-8a7c.up.railway.app/admin/login';
+      const url = isSignUp ? 'https://backend-production-8a7c.up.railway.app/signup' : 'https://backend-production-8a7c.up.railway.app/login';
+      //const url = isSignUp ? 'http://localhost:5000/admin/signup' : 'http://localhost:5000/admin/login';
       const method = 'POST';
       const body = JSON.stringify({ username, email, password });
       const headers = { 'Content-Type': 'application/json' };
