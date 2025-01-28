@@ -4,7 +4,7 @@ import con from './connectDB.js';
 const router = express.Router();
 
 // Route pour login
-router.post('/login', (req, res) => {
+router.post('/admin/login', (req, res) => {
     const { username, password } = req.body;
 
     const query = 'SELECT * FROM users WHERE username = ? AND password = ?';
@@ -22,7 +22,7 @@ router.post('/login', (req, res) => {
 });
 
 // Route pour sign up
-router.post('/signup', (req, res) => {
+router.post('/admin/signup', (req, res) => {
     const { username, email, password } = req.body;
 
     const query = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
