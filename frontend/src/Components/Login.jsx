@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import backend from '/src/assets/login.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [isSignUp, setIsSignUp] = useState(false);
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -43,6 +45,7 @@ const Login = () => {
 
         if (response.ok) {
           alert(isSignUp ? "Registered successfully!" : "Logged in successfully!");
+          navigate('/dashboard');
         } else {
           alert(data.message);
         }
